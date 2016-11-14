@@ -18,10 +18,9 @@ if(isset($_POST['login'])) {
       
       $count = mysqli_num_rows($result);
       
-      // If result matched $myusername and $mypassword, table row must be 1 row
+      // If result matched $email and $mypassword, table row must be 1 row
 		
       if($count == 1) {
-         //session_register("myusername");
          $_SESSION['email'] = $row['email'];
          $_SESSION['username'] = $row['fullname'];
           
@@ -61,7 +60,7 @@ if(isset($_POST['login'])) {
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="#"><b>Jacos</a>
+      <a href="#"><b>Jacos JCS System</b></a>
   </div>
 
   <div class="register-box-body">
@@ -86,9 +85,13 @@ if(isset($_POST['login'])) {
           <button type="submit" name="login" class="btn btn-primary btn-block btn-flat">Login</button>
         </div>
           
+        <div class="col-xs-4"></div> <!--for sape between button-->
+          
         <div class="col-xs-4">
           <a href="register.php" type="button" class="btn btn-primary btn-block btn-flat">register</a>
         </div>
+          
+          
         <!-- /.col -->
       </div>
     </form>
